@@ -20,3 +20,7 @@ primary_region = "ord"
 [http_service]
   internal_port = 8080
   force_https = true
+
+[[files]]
+  guest_path = "/opt/nvidia/entrypoint.d/45-flyio.sh"
+  local_path = "45-flyio.sh"
