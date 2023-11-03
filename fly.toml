@@ -11,6 +11,7 @@ primary_region = "ord"
   LIVEBOOK_DATA_PATH = "/data"
   LIVEBOOK_ROOT_PATH = "/data"
   LIVEBOOK_APP_SERVICE_NAME = "Fly.io GPU demo"
+  XLA_TARGET = "cuda118"
   PORT = "8080"
 
 [[mounts]]
