@@ -1,0 +1,22 @@
+app = "livegpu"
+primary_region = "ord"
+
+[build]
+  image = "ghcr.io/livebook-dev/livebook:0.11.3"
+
+[env]
+  ELIXIR_ERL_OPTIONS = "-proto_dist inet6_tcp"
+  LIVEBOOK_IP = "::"
+  LIVEBOOK_HOME = "/data"
+  LIVEBOOK_DATA_PATH = "/data"
+  LIVEBOOK_ROOT_PATH = "/data"
+  LIVEBOOK_APP_SERVICE_NAME = "Fly.io GPU demo"
+  PORT = "8080"
+
+[[mounts]]
+  source = "livebook_data"
+  destination = "/data"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
