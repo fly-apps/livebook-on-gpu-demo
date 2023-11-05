@@ -5,14 +5,18 @@ primary_region = "ord"
   image = "ghcr.io/livebook-dev/livebook:0.11.3-cuda11.8"
 
 [env]
+  PORT = "8080"
   ELIXIR_ERL_OPTIONS = "-proto_dist inet6_tcp"
   LIVEBOOK_IP = "::"
-  LIVEBOOK_HOME = "/data"
-  LIVEBOOK_DATA_PATH = "/data"
-  LIVEBOOK_ROOT_PATH = "/data"
+  LIVEBOOK_HOME = "/data/livebook"
+  LIVEBOOK_DATA_PATH = "/data/livebook"
+  LIVEBOOK_ROOT_PATH = "/data/livebook"
   LIVEBOOK_APP_SERVICE_NAME = "Fly.io GPU demo"
+  MIX_HOME="/data/mix"
+  MIX_INSTALL_DIR="/data/mix"
+  BUMBLEBEE_CACHE_DIR="/data/cache/bumblebee"
   XLA_TARGET = "cuda118"
-  PORT = "8080"
+  XLA_CACHE_DIR="/data/cache/xla"
 
 [[mounts]]
   source = "livebook_data"

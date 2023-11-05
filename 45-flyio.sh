@@ -4,3 +4,5 @@ nvidia-smi
 # Update ldconfig cache
 ldconfig
 
+# create livebook data directory
+mkdir -p /data/livebook
