@@ -1,6 +1,10 @@
 app = "livegpu"
 primary_region = "ord"
 
+[[vm]]
+size = "a100-40gb"
+memory = "64gb"
+
 [build]
   image = "ghcr.io/livebook-dev/livebook:0.11.3-cuda11.8"
 
